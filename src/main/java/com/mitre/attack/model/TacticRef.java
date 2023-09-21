@@ -8,20 +8,21 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
+@Table(name = "item_tactic_reference")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ItemObject {
+public class TacticRef {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "object_id", columnDefinition = "VARCHAR(250)")
-    private String objectId;
+    @Column(name = "tactic_reference", columnDefinition = "VARCHAR(80)")
+    private String tacticReference;
 
-    public ItemObject(String objectId) {
-        this.objectId = objectId;
+    public TacticRef(String reference) {
+        this.tacticReference = reference;
     }
 }

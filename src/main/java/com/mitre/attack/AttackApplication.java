@@ -23,7 +23,9 @@ public class AttackApplication {
   @PostConstruct
   void postConstruct() {
     try {
+      log.info("PLEASE WAIT - LOADING DATA");
       itemService.loadData();
+      log.info("LOADING DATA HAS FINISHED");
     } catch (AttackException ae) {
       log.error(ae.getMessage());
     }

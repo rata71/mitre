@@ -1,9 +1,9 @@
 package com.mitre.attack.controller;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 import com.mitre.attack.service.impl.ReadFileContext;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class ReadFileControllerTest {
 
